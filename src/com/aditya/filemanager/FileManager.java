@@ -1,5 +1,6 @@
 package com.aditya.filemanager;
 
+
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
 import java.awt.GridLayout;
@@ -56,15 +57,14 @@ public class FileManager {
     private int rowIconPadding = 6;
 
     /* File controls. */
-//    private JButton openFile;
-//    private JButton printFile;
-//    private JButton editFile;
-//    private JButton deleteFile;
-//    private JButton newFile;
-//    private JButton copyFile;
+    private JButton openFile;
+    private JButton deleteFile;
+    private JButton newFile;
+    private JButton copyFile;
     /* File details. */
     private JLabel fileName;
     private JTextField path;
+    private JTextField getName;
     private JLabel date;
     private JLabel size;
     private JCheckBox readable;
@@ -194,89 +194,62 @@ public class FileManager {
             // mnemonics stop working in a floated toolbar
             toolBar.setFloatable(false);
 
-//            openFile = new JButton("Open");
-//            openFile.setMnemonic('o');
-//
-//            openFile.addActionListener(new ActionListener(){
-//                public void actionPerformed(ActionEvent ae) {
-//                    try {
-//                        desktop.open(currentFile);
-//                    } catch(Throwable t) {
-//                        showThrowable(t);
-//                    }
-//                    gui.repaint();
-//                }
-//            });
-//            toolBar.add(openFile);
-//
-//            editFile = new JButton("Edit");
-//            editFile.setMnemonic('e');
-//            editFile.addActionListener(new ActionListener(){
-//                public void actionPerformed(ActionEvent ae) {
-//                    try {
-//                        desktop.edit(currentFile);
-//                    } catch(Throwable t) {
-//                        showThrowable(t);
-//                    }
-//                }
-//            });
-//            toolBar.add(editFile);
-//
-//            printFile = new JButton("Print");
-//            printFile.setMnemonic('p');
-//            printFile.addActionListener(new ActionListener(){
-//                public void actionPerformed(ActionEvent ae) {
-//                    try {
-//                        desktop.print(currentFile);
-//                    } catch(Throwable t) {
-//                        showThrowable(t);
-//                    }
-//                }
-//            });
-//            toolBar.add(printFile);
-//
-//            // Check the actions are supported on this platform!
-//            openFile.setEnabled(desktop.isSupported(Desktop.Action.OPEN));
-//            editFile.setEnabled(desktop.isSupported(Desktop.Action.EDIT));
-//            printFile.setEnabled(desktop.isSupported(Desktop.Action.PRINT));
-//
-//            toolBar.addSeparator();
-//
-//            newFile = new JButton("New");
-//            newFile.setMnemonic('n');
-//            newFile.addActionListener(new ActionListener(){
-//                public void actionPerformed(ActionEvent ae) {
-//                    newFile();
-//                }
-//            });
-//            toolBar.add(newFile);
-//
-//            copyFile = new JButton("Copy");
-//            copyFile.setMnemonic('c');
-//            copyFile.addActionListener(new ActionListener(){
-//                public void actionPerformed(ActionEvent ae) {
-//                    showErrorMessage("'Copy' not implemented.", "Not implemented.");
-//                }
-//            });
-//            toolBar.add(copyFile);
-//
-//            JButton renameFile = new JButton("Rename");
-//            renameFile.setMnemonic('r');
-//            renameFile.addActionListener(new ActionListener(){
-//                public void actionPerformed(ActionEvent ae) {
-//                    renameFile();
-//                }
-//            });
-//            toolBar.add(renameFile);
-//
-//            deleteFile = new JButton("Delete");
-//            deleteFile.setMnemonic('d');
-//            deleteFile.addActionListener(new ActionListener(){
-//                public void actionPerformed(ActionEvent ae) {
-//                    deleteFile();
-//                }
-//            });
-//            toolBar.add(deleteFile);
+            openFile = new JButton("Open");
+            openFile.setMnemonic('o');
+
+            openFile.addActionListener(new ActionListener(){
+                public void actionPerformed(ActionEvent ae) {
+                    try {
+                        desktop.open(currentFile);
+                    } catch(Throwable t) {
+                        showThrowable(t);
+                    }
+                    gui.repaint();
+                }
+            });
+            toolBar.add(openFile);
+
+
+            // Check the actions are supported on this platform!
+            openFile.setEnabled(desktop.isSupported(Desktop.Action.OPEN));
+
+            toolBar.addSeparator();
+
+            newFile = new JButton("New");
+            newFile.setMnemonic('n');
+            newFile.addActionListener(new ActionListener(){
+                public void actionPerformed(ActionEvent ae) {
+                    newFile();
+                }
+            });
+            toolBar.add(newFile);
+
+            copyFile = new JButton("Copy");
+            copyFile.setMnemonic('c');
+            copyFile.addActionListener(new ActionListener(){
+                public void actionPerformed(ActionEvent ae) {
+                    showErrorMessage("'Copy' not implemented.", "Not implemented.");
+                }
+            });
+            toolBar.add(copyFile);
+
+            JButton renameFile = new JButton("Rename");
+            renameFile.setMnemonic('r');
+            renameFile.addActionListener(new ActionListener(){
+                public void actionPerformed(ActionEvent ae) {
+                    renameFile();
+                }
+            });
+            toolBar.add(renameFile);
+
+            deleteFile = new JButton("Delete");
+            deleteFile.setMnemonic('d');
+            deleteFile.addActionListener(new ActionListener(){
+                public void actionPerformed(ActionEvent ae) {
+                    deleteFile();
+                }
+            });
+            toolBar.add(deleteFile);
 
             toolBar.addSeparator();
 
@@ -476,14 +449,17 @@ public class FileManager {
                         DefaultMutableTreeNode newNode = new DefaultMutableTreeNode(file);
 
                         TreePath currentPath = findTreePath(currentFile);
-                        DefaultMutableTreeNode currentNode = (DefaultMutableTreeNode)currentPath.getLastPathComponent();
+                        DefaultMutableTreeNode currentNode =
+                                (DefaultMutableTreeNode)currentPath.getLastPathComponent();
 
                         treeModel.insertNodeInto(newNode, parentNode, parentNode.getChildCount());
                     }
 
                     showChildren(parentNode);
                 } else {
-                    String msg = "The file '" + file + "' could not be created.";
+                    String msg = "The file '" +
+                            file +
+                            "' could not be created.";
                     showErrorMessage(msg, "Create Failed");
                 }
             } catch(Throwable t) {
@@ -504,7 +480,12 @@ public class FileManager {
 
     private void showThrowable(Throwable t) {
         t.printStackTrace();
-        JOptionPane.showMessageDialog(gui, t.toString(), t.getMessage(), JOptionPane.ERROR_MESSAGE);
+        JOptionPane.showMessageDialog(
+                gui,
+                t.toString(),
+                t.getMessage(),
+                JOptionPane.ERROR_MESSAGE
+        );
         gui.repaint();
     }
 
@@ -547,6 +528,7 @@ public class FileManager {
             // use the preferred width of the header..
             JLabel label = new JLabel( (String)tableColumn.getHeaderValue() );
             Dimension preferred = label.getPreferredSize();
+            // altered 10->14 as per camickr comment.
             width = (int)preferred.getWidth()+14;
         }
         tableColumn.setPreferredWidth(width);
@@ -687,7 +669,5 @@ public class FileManager {
         });
     }
 }
-
-
 
 

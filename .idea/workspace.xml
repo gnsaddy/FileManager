@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0f6311c7-9323-409c-8e5b-d722c5e2022e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/aditya/filemanager/FileManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/aditya/filemanager/FileTableModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/aditya/filemanager/FileTreeCellRenderer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/aditya/filemanager/FileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/aditya/filemanager/FileManager.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,27 +17,62 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/aditya/filemanager/FileManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-714" />
+            <state relative-caret-position="-527">
+              <caret line="65" column="28" selection-start-line="65" selection-start-column="28" selection-end-line="65" selection-end-column="28" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#9146#9147#0" expanded="true" />
+                <element signature="e#9195#9196#0" expanded="true" />
+                <element signature="e#9829#9830#0" expanded="true" />
+                <element signature="e#9881#9882#0" expanded="true" />
+                <element signature="e#10149#10150#0" expanded="true" />
+                <element signature="e#10201#10202#0" expanded="true" />
+                <element signature="e#25217#25224#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/aditya/filemanager/FileTreeCellRenderer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="17" column="29" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
+            </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/aditya/filemanager/FileTableModel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="17" column="19" lean-forward="true" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
+            <state relative-caret-position="238">
+              <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>date</find>
+      <find>getName()</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/com/aditya/filemanager/FileManager.java" />
+        <option value="$PROJECT_DIR$/src/com/aditya/filemanager/FileTableModel.java" />
+      </list>
+    </option>
+  </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="width" value="1221" />
-    <option name="height" value="687" />
+    <option name="width" value="1366" />
+    <option name="height" value="768" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -77,13 +111,14 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554297190715" />
-    <property name="last_opened_file_path" value="$USER_HOME$/javafx-sdk-13/lib/libprism_sw.so" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554309956364" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/FileExplorerFx" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
   </component>
   <component name="RecentsManager">
@@ -133,24 +168,24 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1554297050308</updated>
-      <workItem from="1554297055777" duration="91000" />
+      <workItem from="1554297055777" duration="3009000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="91000" />
+    <option name="totallyTimeSpent" value="3009000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="768" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Image Layers" />
       <window_info id="Designer" />
       <window_info id="UI Designer" />
       <window_info id="Capture Tool" />
       <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Messages" weight="0.32872504" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" />
       <window_info anchor="bottom" id="Version Control" />
@@ -158,7 +193,7 @@
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32872504" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -180,13 +215,32 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/com/aditya/filemanager/FileManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-714" />
+        <state relative-caret-position="-527">
+          <caret line="65" column="28" selection-start-line="65" selection-start-column="28" selection-end-line="65" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#9146#9147#0" expanded="true" />
+            <element signature="e#9195#9196#0" expanded="true" />
+            <element signature="e#9829#9830#0" expanded="true" />
+            <element signature="e#9881#9882#0" expanded="true" />
+            <element signature="e#10149#10150#0" expanded="true" />
+            <element signature="e#10201#10202#0" expanded="true" />
+            <element signature="e#25217#25224#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/aditya/filemanager/FileTreeCellRenderer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="17" column="29" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/aditya/filemanager/FileTableModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="17" column="19" lean-forward="true" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
+        <state relative-caret-position="238">
+          <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
         </state>
       </provider>
     </entry>
